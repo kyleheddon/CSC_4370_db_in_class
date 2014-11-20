@@ -6,7 +6,7 @@ username = gets.chomp
 puts "Creating sync.rb file with username #{username}\n"
 
 sync_file_contents = '#!/usr/bin/env ruby \n'
-sync_file_contents += '\`cd app && scp -r ./'' ' + username + '@codd.cs.gsu.edu:~/public_html/project_2\`'
+sync_file_contents += '\`cd app && scp -r ./'' ' + username + '@codd.cs.gsu.edu:~/public_html/db_in_class\`'
 
 `echo "#{sync_file_contents}" > sync.rb && chmod 755 sync.rb`
 
