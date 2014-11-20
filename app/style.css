@@ -5,7 +5,7 @@
 .label {
     margin-bottom: 0px;
 }
-            
+
 .container_form{
     width: 600px;
     margin: 50px auto 0px auto;
@@ -21,7 +21,7 @@
 }
 
 .search{
-  
+
     width: 350px;
     padding: 6px 10px ;
 }
@@ -33,6 +33,3 @@
     margin-left: -5px;
     color:#fff;
 }
-            
-            
-

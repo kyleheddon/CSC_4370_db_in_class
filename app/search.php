@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -16,11 +11,11 @@ and open the template in the editor.
             <a href="#">enter new record</a>
             <form>
                 <p>Enter Artist Name or Album:</p>
-                <input class="search" type="text" name="username"> 
-                <input class="go" type="submit" value="GO!"> 
+                <input class="search" type="text" name="username">
+                <input class="go" type="submit" value="GO!">
             </form>
         </div>
-        
+
         <?php
         ?>
     </body>
