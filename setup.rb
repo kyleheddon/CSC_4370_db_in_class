@@ -30,4 +30,4 @@ db_config_file_contents = <<-EOS
 ?>
 EOS
 
-`echo "#{db_config_file_contents}" > db_config.php && chmod 755 db_config.php`
+`echo "#{db_config_file_contents}" > app/db_config.php && chmod 755 db_config.php`
