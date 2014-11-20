@@ -1,0 +1,38 @@
+.container{
+    width: 200px;
+    margin: 50px auto 0px auto;
+}
+.label {
+    margin-bottom: 0px;
+}
+            
+.container_form{
+    width: 600px;
+    margin: 50px auto 0px auto;
+}
+
+.main_container{
+    width: 600px;
+    margin: 50px auto 0px auto;
+}
+
+.large {
+    width: 220px;
+}
+
+.search{
+  
+    width: 350px;
+    padding: 6px 10px ;
+}
+
+.go{
+    height: 28px;
+    background-color: blue;
+    border: 1px solid blue;
+    margin-left: -5px;
+    color:#fff;
+}
+            
+            
+
