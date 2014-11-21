@@ -1,7 +1,7 @@
 <?php
   $page_title = 'New Artist';
   include 'header.php';
-  include 'lib/artist.php';
+  include_once 'lib/artist.php';
 
   $artist_name = fetch_post_var('artist_name');
   if($artist_name){

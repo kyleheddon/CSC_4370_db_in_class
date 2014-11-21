@@ -1,5 +1,6 @@
 <?php
 	include_once 'mysql_db.php';
+	include_once 'lib/album.php';
 
 	class Artist {
 		private $db;
@@ -17,6 +18,10 @@
 			$this->db->query($sql);
 
 			return true;
+		}
+
+		public function get_albums(){
+			return Album::find_by_artist_id($this->id);
 		}
 
 		public static function get_all(){

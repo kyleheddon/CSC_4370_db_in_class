@@ -1,8 +1,8 @@
 <?php
 	$page_title = 'New Album';
 	include 'header.php';
-	include 'lib/artist.php';
-	include 'lib/album.php';
+	include_once 'lib/artist.php';
+	include_once 'lib/album.php';
 
 	function implode_media_types(){
 		$cd = fetch_post_var('media_type_cd');

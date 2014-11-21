@@ -1,11 +1,11 @@
 <?php
 	include 'header.php';
-	include 'lib/artist.php';
-	include 'lib/album.php';
+	include_once 'lib/artist.php';
+	include_once 'lib/album.php';
 
 	$id = fetch_get_var('id');
 	$artist = Artist::find_by_id($id);
-	$albums = Album::find_by_artist_id($id);
+	$albums = $artist->get_albums();
 ?>
 
 <h1><?php echo $artist->name; ?></h1>
@@ -33,9 +33,9 @@
 			</div>
 		</div>
 
-		<h3><a href="new_album.php?artist_id=<?php echo $id; ?>">Add More Albums</a></h3>
-
 	<?php } ?>
+	<h3><a href="new_album.php?artist_id=<?php echo $id; ?>">Add More Albums</a></h3>
+
 <?php } else { ?>
 	<h2>No Albums</h2>
 	<h3><a href="new_album.php?artist_id=<?php echo $id; ?>">Create one now</a></h3>

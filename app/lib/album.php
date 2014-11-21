@@ -1,5 +1,6 @@
 <?php
 	include_once 'mysql_db.php';
+	include_once 'lib/artist.php';
 
 	class Album {
 		private $db;
@@ -26,13 +27,17 @@
 			return true;
 		}
 
+		public function get_artist(){
+			return Artist::find_by_id($this->artist_id);
+		}
+
 		public static function find($wheres){
 			$wheres_sql = Album::get_wheres_sql($wheres);
-			$sql = "select * from artists where $wheres_sql";
+			$sql = "select * from albums where $wheres_sql";
 			$result = Album::query($sql);
 
 			if($result){
-				return Album::convert_result_to_artists($result);
+				return Album::convert_result_to_albums($result);
 			}
 
 			return array();
