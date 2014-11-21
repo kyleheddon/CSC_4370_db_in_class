@@ -35,6 +35,10 @@
     padding: 6px 10px ;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .go{
     height: 28px;
     background-color: blue;
@@ -42,8 +46,17 @@
     margin-left: -5px;
     color:#fff;
 }
-#logout {
+
+#user_nav {
   position: absolute;
-  top: 20px;
-  right: 40px;
+  top: 4px;
+  right: 30px;
+}
+
+#user_nav {
+  list-style: none;
+}
+
+#user_nav li {
+  display: inline;
 }

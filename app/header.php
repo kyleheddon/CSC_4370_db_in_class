@@ -18,6 +18,10 @@
 				<link rel="stylesheet" type="text/css" href="style.css">
 		</head>
 		<body>
-			<a id="logout" href="logout.php">Logout</a>
+			<ul id="user_nav">
+				<li class="bold"><?php echo $_SESSION['current_user']['username']; ?></li>
+				<li><a id="logout" href="logout.php">Logout</a></li>
+			</ul>
+
 
 			<div class="container">
