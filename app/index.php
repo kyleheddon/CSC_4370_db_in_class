@@ -1,3 +1,8 @@
+<?php
+  include 'createTables.php';
+  $tableCreator = new TableCreator();
+  $tableCreator->create_tables();
+?>
 <!DOCTYPE html>
 <html>
     <head>
