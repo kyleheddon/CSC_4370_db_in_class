@@ -7,12 +7,12 @@
 	function implode_media_types(){
 		$cd = fetch_post_var('media_type_cd');
 		$tape = fetch_post_var('media_type_tape');
-		$cassette = fetch_post_var('media_type_cassette');
+		$dvd = fetch_post_var('media_type_dvd');
 
 		$media_types = array();
 		if($cd) $media_types[] = 'cd';
 		if($tape) $media_types[] = 'tape';
-		if($cassette) $media_types[] = 'cassette';
+		if($dvd) $media_types[] = 'dvd';
 
 		return implode(';', $media_types);
 	}
@@ -68,8 +68,8 @@
 				<input type="checkbox" name="media_type_tape" />
 			</label>
 			<label>
-				Cassette
-				<input type="checkbox" name="media_type_cassette" />
+				DVD
+				<input type="checkbox" name="media_type_dvd" />
 			</label>
 		</div>
 		<input type="submit" />
