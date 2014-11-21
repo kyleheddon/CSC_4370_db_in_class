@@ -1,5 +1,5 @@
 <?php
-	include 'createTables.php';
+	include 'lib/createTables.php';
 	$tableCreator = new TableCreator();
 	$tableCreator->create_tables();
 

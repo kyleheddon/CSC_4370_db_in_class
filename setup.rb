@@ -17,7 +17,7 @@ puts "Done! To sync the app directory, enter \"./sync.rb\" into the terminal.\n"
 print "Enter your MySQL password: \n"
 password = gets.chomp
 
-puts "Creating db_config.php file with username #{username} and your password\n"
+puts "Creating app/lib/db_config.php file with username #{username} and your password\n"
 
 db_config_file_contents = <<-EOS
 <?php
@@ -30,4 +30,5 @@ db_config_file_contents = <<-EOS
 ?>
 EOS
 
-`echo "#{db_config_file_contents}" > app/db_config.php && chmod 755 db_config.php`
+`mkdir -p app/lib`
+`echo "#{db_config_file_contents}" > app/lib/db_config.php`

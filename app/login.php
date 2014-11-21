@@ -1,6 +1,6 @@
 <?php
-	include 'util.php';
-	include 'authenticator.php';
+	include 'lib/util.php';
+	include 'lib/authenticator.php';
 
 	function login($username, $password){
 		$authenticator = new Authenticator();
