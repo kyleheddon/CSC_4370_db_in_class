@@ -1,12 +1,11 @@
 <?php
-	include 'db_config.php';
+	include_once 'mysql_db.php';
 
 	class TableCreator {
-		private $connection;
-		private $debug_log = '';
+		private $db;
 
 		public function __construct(){
-			$this->connection = $this->connect_to_db();
+			$this->db = new MysqlDb();
 		}
 
 		public function create_tables(){
@@ -19,10 +18,6 @@
 			$this->insert_a_user('andres', '1337');
 		}
 
-		public function get_debug(){
-			return $this->debug_log;
-		}
-
 		private function create_table($table_name, $columns){
 			if(!$this->table_exists($table_name)){
 				$create_columns_sql = $this->create_columns_sql($columns);
@@ -33,7 +28,6 @@
 
 		private function insert_a_user($username, $password){
 			if($this->user_exists($username)){
-				$this->debug("user, $username, exists");
 				return;
 			}
 
@@ -62,18 +56,8 @@
 			return implode(', ', $column_sqls);
 		}
 
-		private function connect_to_db(){
-			$db_credentials = get_mysql_credentials();
-			return new mysqli('localhost', $db_credentials['username'], $db_credentials['password'], $db_credentials['username']);
-		}
-
-		private function debug($str){
-			$this->debug_log .= "$str \n";
-		}
-
 		private function query($sql){
-			$this->debug($sql);
-			return $this->connection->query($sql);
+			return $this->db->query($sql);
 		}
 	}
 

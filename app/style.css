@@ -1,7 +1,16 @@
 .container{
-    width: 200px;
-    margin: 50px auto 0px auto;
+    width: 80%;
+    margin: auto;
 }
+.login {
+    width: 200px;
+    margin: 50px auto 0;
+}
+
+.login form label, .login form input {
+    display: block;
+}
+
 .label {
     margin-bottom: 0px;
 }
@@ -32,4 +41,9 @@
     border: 1px solid blue;
     margin-left: -5px;
     color:#fff;
+}
+#logout {
+  position: absolute;
+  top: 20px;
+  right: 40px;
 }
