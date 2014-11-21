@@ -7,8 +7,16 @@
     margin: 50px auto 0;
 }
 
-.login form label, .login form input {
+label, input, select {
     display: block;
+}
+
+input[type="checkbox"] {
+  display: inline;
+}
+
+.checkbox-group label {
+  margin-left: 10px;
 }
 
 .label {
@@ -59,4 +67,14 @@
 
 #user_nav li {
   display: inline;
+}
+
+.album {
+  border: 1px solid #666;
+  margin: 8px 0;
+}
+
+.album ul {
+    margin: 2px 8px;
+    padding: 0 0 0 12px;
 }

@@ -9,6 +9,11 @@
 			$this->connection = $this->connect_to_db();
 		}
 
+		public static function run_query($sql){
+			$db = new MysqlDb();
+			return $db->query($sql);
+		}
+
 		public function query($sql){
 			$this->debug($sql);
 			return $this->connection->query($sql);

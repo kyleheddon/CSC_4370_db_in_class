@@ -1,5 +1,7 @@
 <?php
 	include 'lib/createTables.php';
+	include_once 'lib/util.php';
+
 	$tableCreator = new TableCreator();
 	$tableCreator->create_tables();
 
@@ -7,7 +9,7 @@
 	$logged_in = isset($_SESSION['current_user']);
 	$on_login_page = strpos($_SERVER['SCRIPT_NAME'], 'login.php');
 	if(!$logged_in && !$on_login_page){
-		header('Location: ./login.php');
+		redirect_to('login.php');
 	}
 ?>
 <!DOCTYPE html>

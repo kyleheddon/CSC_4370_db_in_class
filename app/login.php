@@ -1,16 +1,16 @@
 <?php
-	include 'lib/util.php';
+	include_once 'lib/util.php';
 	include 'lib/authenticator.php';
 
 	function login($username, $password){
 		$authenticator = new Authenticator();
 		if($authenticator->login($username, $password)){
-			header('Location: ./');
+			redirect_to('./');
 		}
 	}
 
-	$username = get_post_var('username');
-	$password = get_post_var('password');
+	$username = fetch_post_var('username');
+	$password = fetch_post_var('password');
 	if($username && $password){
 		login($username, $password);
 	}

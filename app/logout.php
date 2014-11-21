@@ -1,5 +1,8 @@
 <?php
+	include 'lib/util.php';
+
 	session_start();
 	$_SESSION['current_user'] = null;
-	header('Location: ./login.php');
+
+	redirect_to('login.php');
 ?>

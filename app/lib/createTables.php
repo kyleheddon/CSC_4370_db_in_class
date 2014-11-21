@@ -11,7 +11,7 @@
 		public function create_tables(){
 			$this->create_table('users', array('name', 'password'));
 			$this->create_table('artists', array('name'));
-			$this->create_table('albums', array('name', 'year', 'media_types'));
+			$this->create_table('albums', array('name', 'year', 'media_types', 'artist_id'));
 
 			$this->insert_a_user('general', 'password');
 			$this->insert_a_user('kyle', '1337');
