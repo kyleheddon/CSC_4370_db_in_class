@@ -2,7 +2,7 @@
   include_once 'lib/artist.php';
   include_once 'lib/album.php';
 
-  $page_title = 'Home';
+  $page_title = 'Search';
   include 'header.php';
 
   $keywords = fetch_get_var('keywords');
